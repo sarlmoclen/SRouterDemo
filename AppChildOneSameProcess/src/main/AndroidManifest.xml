@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sarlmoclen.one">
+
+    <application>
+        <activity android:name="com.sarlmoclen.one.ChildActivity"></activity>
+    </application>
+
+</manifest>
