@@ -10,4 +10,10 @@
         android:layout_height="50dp"
         android:text="go to one from same process"
         android:textAllCaps="false"  />
+    <Button
+        android:id="@+id/test"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="test the high-concurre"
+        android:textAllCaps="false"  />
 </LinearLayout>

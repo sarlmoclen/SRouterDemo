@@ -2,6 +2,8 @@ package com.sarlmoclen.router;
 
 import android.content.Context;
 
+import com.sarlmoclen.router.utils.SLog;
+
 import java.util.HashMap;
 
 /**
@@ -28,11 +30,19 @@ public class SRouter {
         return mInstance;
     }
 
+    public void registerAction(String action,SAction mSAction){
+        if(mActions.containsKey(action)){
+            SLog.e(SLog.TAG,"SRouter/registerAction:action has redister!");
+            return;
+        }
+        mActions.put(action,mSAction);
+    }
+
     public SRouterResponse sendMessage(Context c,SRouterRequest mSRouterRequest){
         SRouterResponse mSRouterResponse = new SRouterResponse();
         SAction mSAction = findRequest(mSRouterRequest);
         if(mSAction != null){
-            Object mObject = mSAction.invoke(c,mSRouterRequest.getData());
+            Object mObject = mSAction.startAction(c,mSRouterRequest.getData());
             mSRouterResponse.setStatus(SRouterResponse.SUCCESS_CODE
                     ,SRouterResponse.SUCCESS_DESC
                     ,mObject);
@@ -50,10 +60,6 @@ public class SRouter {
             return mActions.get(action);
         }
         return null;
-    }
-
-    public void registerAction(String action,SAction mSAction){
-        mActions.put(action,mSAction);
     }
 
 }

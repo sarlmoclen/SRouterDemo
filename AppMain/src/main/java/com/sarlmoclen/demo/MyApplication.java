@@ -1,12 +1,14 @@
 package com.sarlmoclen.demo;
 
+
 import com.sarlmoclen.common.MainActionName;
 import com.sarlmoclen.common.OneActionName;
 import com.sarlmoclen.common.TwoActionName;
+import com.sarlmoclen.demo.action.MainAction;
 import com.sarlmoclen.router.SApplication;
 import com.sarlmoclen.router.SRouter;
-import com.sarlmoclen.one.OneAction;
-import com.sarlmoclen.two.TwoAction;
+import com.sarlmoclen.one.action.OneAction;
+import com.sarlmoclen.two.action.TwoAction;
 
 /**
  * Created by sarlmoclen on 2017/5/24.

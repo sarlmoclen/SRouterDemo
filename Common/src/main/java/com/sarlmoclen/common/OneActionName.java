@@ -6,6 +6,6 @@ package com.sarlmoclen.common;
 
 public class OneActionName {
 
-    public final static String name = "OneAction";
+    public final static String name = "OneAction:test";
 
 }

@@ -10,6 +10,6 @@ import java.util.HashMap;
 
 public abstract class SAction {
 
-    public abstract Object invoke(Context context, HashMap<String,Object> requestData);
+    public abstract Object startAction(Context context, HashMap<String,Object> requestData);
 
 }
