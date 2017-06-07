@@ -5,15 +5,9 @@
     android:orientation="vertical"
     android:background="#ffffff">
     <Button
-        android:id="@+id/goSameProcess"
+        android:id="@+id/go"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="go to one from same process"
-        android:textAllCaps="false"  />
-    <Button
-        android:id="@+id/goDifferentProcess"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="go to three from different process"
+        android:text="go to one from different process"
         android:textAllCaps="false"  />
 </LinearLayout>

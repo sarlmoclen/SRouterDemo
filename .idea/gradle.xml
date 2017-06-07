@@ -9,6 +9,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/AppChildOneSameProcess" />
+            <option value="$PROJECT_DIR$/AppChildThreeDifferentProcess" />
             <option value="$PROJECT_DIR$/AppChildTwoSameProcess" />
             <option value="$PROJECT_DIR$/AppMain" />
             <option value="$PROJECT_DIR$/Common" />

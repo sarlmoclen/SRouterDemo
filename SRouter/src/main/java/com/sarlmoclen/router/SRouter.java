@@ -23,6 +23,7 @@ public class SRouter {
         if(mInstance == null){
             synchronized (SRouter.class){
                 if(mInstance == null){
+                    SLog.e(SLog.TAG,"SRouter/getInstance():init!");
                     mInstance = new SRouter();
                 }
             }
@@ -32,7 +33,7 @@ public class SRouter {
 
     public void registerAction(String action,SAction mSAction){
         if(mActions.containsKey(action)){
-            SLog.e(SLog.TAG,"SRouter/registerAction:action has redister!");
+            SLog.e(SLog.TAG,"SRouter/registerAction():action has redister!");
             return;
         }
         mActions.put(action,mSAction);

@@ -1,1 +1,1 @@
-include ':SRouter', ':AppMain', ':AppChildOneSameProcess', ':AppChildTwoSameProcess', ':Common'
+include ':SRouter', ':Common', ':AppMain', ':AppChildOneSameProcess', ':AppChildTwoSameProcess', ':AppChildThreeDifferentProcess'

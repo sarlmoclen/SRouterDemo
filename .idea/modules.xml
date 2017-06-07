@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AppChildOneSameProcess/AppChildOneSameProcess.iml" filepath="$PROJECT_DIR$/AppChildOneSameProcess/AppChildOneSameProcess.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AppChildThreeDifferentProcess/AppChildThreeDifferentProcess.iml" filepath="$PROJECT_DIR$/AppChildThreeDifferentProcess/AppChildThreeDifferentProcess.iml" />
       <module fileurl="file://$PROJECT_DIR$/AppChildTwoSameProcess/AppChildTwoSameProcess.iml" filepath="$PROJECT_DIR$/AppChildTwoSameProcess/AppChildTwoSameProcess.iml" />
       <module fileurl="file://$PROJECT_DIR$/AppMain/AppMain.iml" filepath="$PROJECT_DIR$/AppMain/AppMain.iml" />
       <module fileurl="file://$PROJECT_DIR$/Common/Common.iml" filepath="$PROJECT_DIR$/Common/Common.iml" />

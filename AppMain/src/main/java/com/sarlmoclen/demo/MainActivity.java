@@ -7,6 +7,7 @@ import android.widget.Toast;
 
 import com.sarlmoclen.common.MainActionName;
 import com.sarlmoclen.common.OneActionName;
+import com.sarlmoclen.common.ThreeActionName;
 import com.sarlmoclen.router.SRouter;
 import com.sarlmoclen.router.SRouterRequest;
 import com.sarlmoclen.router.SRouterResponse;
@@ -22,14 +23,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }else{
             setTitle("main");
         }
-
-        findViewById(R.id.go).setOnClickListener(this);
-        findViewById(R.id.test).setOnClickListener(this);
+        findViewById(R.id.goSameProcess).setOnClickListener(this);
+        findViewById(R.id.goDifferentProcess).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.go){
+        if(v.getId() == R.id.goSameProcess){
             SRouterResponse mSRouterResponse = SRouter.getInstance().sendMessage(
                     MainActivity.this,SRouterRequest.creat()
                     .action(OneActionName.name)
@@ -37,13 +37,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(MainActivity.this
                     ,mSRouterResponse.getResult().toString()
                     ,Toast.LENGTH_SHORT).show();
-        }else if(v.getId() == R.id.test){
-            for(int i=0;i<10000;i++){
-                SRouterResponse mSRouterResponse = SRouter.getInstance().sendMessage(
-                        MainActivity.this,SRouterRequest.creat()
-                                .action(MainActionName.name)
-                                .data("test_high",""+i));
-            }
+        }else if(v.getId() == R.id.goDifferentProcess){
+            SRouterResponse mSRouterResponse = SRouter.getInstance().sendMessage(
+                    MainActivity.this,SRouterRequest.creat()
+                            .action(ThreeActionName.name)
+                            .data("from","from main"));
+            Toast.makeText(MainActivity.this
+                    ,mSRouterResponse.getResult().toString()
+                    ,Toast.LENGTH_SHORT).show();
         }
     }
 }
