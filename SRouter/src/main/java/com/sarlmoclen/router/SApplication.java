@@ -10,16 +10,9 @@ import android.content.res.Configuration;
 
 public abstract class SApplication extends Application {
 
-    private static SApplication mInstance;
-
-    public static SApplication getSApplication(){
-        return mInstance;
-    }
-
     @Override
     public void onCreate() {
         super.onCreate();
-        mInstance = this;
         registerAction();
     }
 
