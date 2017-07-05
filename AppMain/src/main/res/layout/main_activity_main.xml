@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#ffffff">
     <Button
         android:id="@+id/goSameProcess"
@@ -11,9 +10,25 @@
         android:text="go to one from same process"
         android:textAllCaps="false"  />
     <Button
+        android:layout_below="@+id/goSameProcess"
         android:id="@+id/goDifferentProcess"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="go to three from different process"
-        android:textAllCaps="false"  />
-</LinearLayout>
+        android:textAllCaps="false" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="from github sarlmoclen"
+        android:textColor="#666666"
+        android:lines="1"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textSize="13dp"
+        android:background="@drawable/sarlmoclen_logo_bg"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"/>
+</RelativeLayout>
