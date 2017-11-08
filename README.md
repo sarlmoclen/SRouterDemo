@@ -8,10 +8,6 @@
 compile 'com.sarlmoclen.router:SRouter:0.0.1'
 ```
 
-## 示意图
-
-![image](https://github.com/sarlmoclen/SRouterDemo/blob/master/Screenshot_2017-07-11-16-59-11-929_com.sarlmoclen.demo.png)
-
 ## 框架设计原理
 
 常规开发中，两个模块要实现相互调用，就需要相互依赖，然后才可以调起对方的程序，这种开发模式很容易造成程序
