@@ -24,7 +24,7 @@ compile 'com.sarlmoclen.router:SRouter:0.0.1'
 
 ## 流程图讲解
  * SRouter
-路由框架功能实现部分，其中SRouter.java为核心控制程序，通过HashMap<String, SAction> mActions
+ 	* 路由框架功能实现部分，其中SRouter.java为核心控制程序，通过HashMap<String, SAction> mActions
 （HashMap的查询时间复杂度是O(1)）这种形式，注册每个module的消息通道，key为消息通道的名字，value为
 消息通道的执行部分action。 使用者传入要操作的通道名字，就可以去操作通道的执行部分action。
  * Common
