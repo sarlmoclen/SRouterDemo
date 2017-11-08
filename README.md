@@ -1,6 +1,7 @@
 # SRouterDemo
 ![](https://img.shields.io/badge/language-java-orange.svg)
-# SRouterDemo使用
+https://img.shields.io/badge/{version}-{0.0.1}-519dd9.svg
+# 使用
 项目已经上传至jcenter,引用项目时在bulid.gradle中添加compile 'com.sarlmoclen.router:SRouter:0.0.1'
 # 示意图
 ![image](https://github.com/sarlmoclen/SRouterDemo/blob/master/Screenshot_2017-07-11-16-59-11-929_com.sarlmoclen.demo.png)
