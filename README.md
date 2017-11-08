@@ -47,7 +47,7 @@ public class OneAction extends SAction{
 }
 ```
  
-调用开启通道传递数据
+调用开启通道传递数据,.action(“此处设置通道名称”).data("此处设置给通道传的参数")
 
 ```java
 SRouterResponse mSRouterResponse = SRouter.getInstance().sendMessage(
