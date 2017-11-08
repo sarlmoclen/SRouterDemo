@@ -2,11 +2,59 @@
 ![](https://img.shields.io/badge/release-0.0.1-brightgreen.svg)
 ## 使用
 
-在bulid.gradle中添加
+在你的项目根工程bulid.gradle中添加，让所有工程都依赖SRouter
 
 ```gradle
 compile 'com.sarlmoclen.router:SRouter:0.0.1'
 ```
+
+使用SApplication自定义自己的Application，主要是为了注册每个模块的消息通道，其中registerAction函数第一个参数定义的是通道名称，第二个是消息通道
+
+```java
+ public class MyApplication extends SApplication{
+
+    @Override
+    public void registerAction() {
+        SRouter.getInstance().registerAction(OneActionName.name, new OneAction());
+        SRouter.getInstance().registerAction(TwoActionName.name, new TwoAction());
+        SRouter.getInstance().registerAction(MainActionName.name, new MainAction());
+        SRouter.getInstance().registerAction(ThreeActionName.name, new ThreeAction());
+    }
+
+}
+ ```
+ 
+自定义自己模块的消息通道，其中requestData为通道传递的数据
+
+```java
+public class OneAction extends SAction{
+
+    @Override
+    public Object startAction(Context context, HashMap<String, Object> requestData) {
+        if(context instanceof Activity){
+            Intent i = new Intent(context, ChildActivity.class);
+            i.putExtra("from",requestData.get("from").toString());
+            context.startActivity(i);
+        }else{
+            Intent i = new Intent(context, ChildActivity.class);
+            i.putExtra("from",requestData.get("from").toString());
+            i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(i);
+        }
+        return "arrive one success!";
+    }
+
+}
+```
+ 
+调用开启通道传递数据
+
+```java
+SRouterResponse mSRouterResponse = SRouter.getInstance().sendMessage(
+                    ChildActivity.this, SRouterRequest.creat()
+                            .action(OneActionName.name)
+                            .data("from","from main"));
+ ```
 
 ## 框架设计原理
 
