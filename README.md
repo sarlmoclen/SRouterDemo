@@ -1,16 +1,16 @@
 # SRouterDemo
 ![](https://img.shields.io/badge/release-0.0.1-brightgreen.svg)
-# 使用
+## 使用
 在bulid.gradle中添加compile 'com.sarlmoclen.router:SRouter:0.0.1'
-# 示意图
+## 示意图
 ![image](https://github.com/sarlmoclen/SRouterDemo/blob/master/Screenshot_2017-07-11-16-59-11-929_com.sarlmoclen.demo.png)
-# 框架设计原理
+## 框架设计原理
 常规开发中，两个模块要实现相互调用，就需要相互依赖，然后才可以调起对方的程序，这种开发模式很容易造成程序
 耦合度增加，后期很难维护，为了解决这个问题，参考路由的方式，建立路由器控制程序，所有的模块不再相互依赖，
 而是都依赖这个路由器，通过路由器框架来处理所有模块之间的通信，这样就实现了模块之间的解耦。
-# 框架流程图
+## 框架流程图
 ![image](https://github.com/sarlmoclen/SRouterDemo/blob/master/1499311950.jpg)
-# 流程图讲解
+## 流程图讲解
 【SRouter】
 
 路由框架功能实现部分，其中SRouter.java为核心控制程序，通过HashMap<String, SAction> mActions
@@ -37,7 +37,7 @@
 
 程序入口module，这里要提前注册所有的消息通道，在application中注册。
         
-# 路由框架支持
+## 路由框架支持
 【支持一】
 
 支持单进程和多进程情况下的消息通道使用，单进程就不说了，主要讲解下多进程的支持原理：消息通道的注册是在
@@ -55,3 +55,5 @@ application中注册，所以多进程下会给每个进程注册一份相同的
 解耦，这也是这个框架的目的，这种设计模式可以避开模块相互依赖导致代码耦合度增加，除了AppMain这个模块，其他
 模块之间是单独独立的，遇到模块之间的通信，都用SRouter来实现交互，我们在开发中可以为每个开发小组分配独立的module
 实现并行开发。
+## License
+The Apache Software License, Version 2.0  [LICENSE](http://www.apache.org/licenses/LICENSE-2.0.txt)
