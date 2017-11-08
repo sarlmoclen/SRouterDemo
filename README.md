@@ -1,5 +1,5 @@
 # SRouterDemo
-![](https://img.shields.io/badge/version-0.0.1-green.svg)
+![](https://img.shields.io/badge/release-0.0.1-brightgreen.svg)
 # 使用
 在bulid.gradle中添加compile 'com.sarlmoclen.router:SRouter:0.0.1'
 # 示意图
