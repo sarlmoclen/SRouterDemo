@@ -1,6 +1,5 @@
 # SRouterDemo
 ![](https://img.shields.io/badge/language-java-orange.svg)
-android路由框架SRouter
 # SRouterDemo使用
 项目已经上传至jcenter,引用项目时在bulid.gradle中添加compile 'com.sarlmoclen.router:SRouter:0.0.1'
 # 示意图
