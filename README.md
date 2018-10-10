@@ -93,5 +93,8 @@ application中注册，所以多进程下会给每个进程注册一份相同的
 模块之间是单独独立的，遇到模块之间的通信，都用SRouter来实现交互，我们在开发中可以为每个开发小组分配独立的module
 实现并行开发。
 
+## 框架详解
+ * [自己动手做android路由框架](https://www.jianshu.com/p/200c6cc6adaf)
+
 ## License
 The Apache Software License, Version 2.0  [LICENSE](http://www.apache.org/licenses/LICENSE-2.0.txt)
