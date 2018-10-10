@@ -7,7 +7,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.1'
+        classpath 'com.android.tools.build:gradle:3.2.0'
 
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
@@ -29,9 +29,8 @@ task clean(type: Delete) {
 
 ext {
     var = [
-            minSdkVersion        : 16,
-            targetSdkVersion     : 26,
-            compileSdkVersion    : 26,
-            buildToolsVersion    : "26.0.2"
+            minSdkVersion        : 15,
+            targetSdkVersion     : 28,
+            compileSdkVersion    : 28,
     ]
 }

@@ -2,7 +2,6 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion var.compileSdkVersion
-    buildToolsVersion var.buildToolsVersion
     defaultConfig {
         minSdkVersion var.minSdkVersion
         targetSdkVersion var.targetSdkVersion
@@ -18,6 +17,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':SRouter')
+    api fileTree(dir: 'libs', include: ['*.jar'])
+    api project(':SRouter')
 }
