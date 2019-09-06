@@ -5,6 +5,14 @@
 在你的项目根工程bulid.gradle中添加，让所有工程都依赖SRouter
 
 ```gradle
+buildscript {
+    repositories {
+        maven {url 'https://dl.bintray.com/sarlmoclen/SRouter'}
+    }
+}
+ ```
+
+```gradle
 compile 'com.sarlmoclen.router:SRouter:0.0.1'
 ```
 
