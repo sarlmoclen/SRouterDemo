@@ -5,7 +5,7 @@
 在你的项目根工程bulid.gradle中添加，让所有工程都依赖SRouter
 
 ```gradle
-compile 'com.sarlmoclen.router:SRouter:0.0.1'
+api 'com.sarlmoclen.router:SRouter:0.0.1'
 ```
 
 使用SApplication自定义自己的Application，主要是为了注册每个模块的消息通道，其中registerAction函数第一个参数定义的是通道名称，第二个是消息通道
